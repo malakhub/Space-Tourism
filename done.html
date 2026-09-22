@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You’re cleared · Space Tourism</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" type="image/svg" href="./files/logo.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;400;600&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body data-page="done">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header" id="site-header"></header>
+
+  <main class="centered centered--stack" id="main">
+    <ol class="steps" aria-label="Booking progress">
+      <li class="is-done"><span>1</span>Sign in</li>
+      <li class="is-done"><span>2</span>Pre-flight check</li>
+      <li class="is-current" aria-current="step"><span>3</span>Confirmation</li>
+    </ol>
+
+    <article class="pass" aria-labelledby="pass-title">
+      <div class="pass__main">
+        <p class="pass__end">End of process</p>
+        <h1 id="pass-title" class="pass__title">You’re cleared for launch</h1>
+        <dl class="pass__grid">
+          <div><dt>Passenger</dt><dd id="pass-name"></dd></div>
+          <div><dt>Destination</dt><dd id="pass-dest"></dd></div>
+          <div><dt>Ship</dt><dd id="pass-ship"></dd></div>
+          <div><dt>Distance</dt><dd id="pass-dist"></dd></div>
+          <div><dt>Travel time</dt><dd id="pass-time"></dd></div>
+        </dl>
+      </div>
+      <div class="pass__stub">
+        <p class="pass__stub-label">Booking reference</p>
+        <p class="pass__ref" id="pass-ref"></p>
+      </div>
+    </article>
+
+    <div class="actions">
+      <a class="btn" href="index.html">Back to home</a>
+      <button class="btn btn--ghost" id="book-another" type="button">Book another flight</button>
+    </div>
+  </main>
+
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

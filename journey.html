@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pre-flight check · Space Tourism</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" type="image/svg" href="./files/logo.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;400;600&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body data-page="journey">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header" id="site-header"></header>
+
+  <main class="journey" id="main">
+    <ol class="steps" aria-label="Booking progress">
+      <li class="is-done"><span>1</span>Sign in</li>
+      <li class="is-current" aria-current="step"><span>2</span>Pre-flight check</li>
+      <li><span>3</span>Confirmation</li>
+    </ol>
+
+    <div class="journey__grid">
+      <!-- Trip + ship -->
+      <section class="panel trip" aria-labelledby="trip-dest">
+        <img id="trip-img" alt="" />
+        <div>
+          <h1 class="panel__title" id="trip-dest"></h1>
+          <p class="trip__meta" id="trip-meta"></p>
+
+          <h2 class="trip__ship" id="trip-ship"></h2>
+          <p id="trip-blurb"></p>
+
+          <p class="trip__limits-title">What this ship allows</p>
+          <dl class="limits" id="trip-limits"></dl>
+        </div>
+      </section>
+
+      <!-- Form -->
+      <section class="panel" aria-labelledby="form-title">
+        <h2 class="panel__title panel__title--sm" id="form-title">Tell us about you</h2>
+        <p class="panel__intro">We compare these three numbers with the limits for your ship. If any value is outside its range, the booking can’t continue.</p>
+
+        <form id="journey-form" novalidate>
+          <div class="field">
+            <label for="age">Age (years)</label>
+            <input id="age" name="age" type="number" inputmode="numeric" step="1" />
+            <p class="field__error" id="age-error"></p>
+          </div>
+          <div class="field">
+            <label for="height">Height (cm)</label>
+            <input id="height" name="height" type="number" inputmode="decimal" step="any" />
+            <p class="field__error" id="height-error"></p>
+          </div>
+          <div class="field">
+            <label for="weight">Weight (kg)</label>
+            <input id="weight" name="weight" type="number" inputmode="decimal" step="any" />
+            <p class="field__error" id="weight-error"></p>
+          </div>
+
+          <button class="btn btn--block" id="journey-submit" type="submit">Check eligibility</button>
+        </form>
+
+        <div id="results" class="results"></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

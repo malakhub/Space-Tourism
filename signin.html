@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign in · Space Tourism</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" type="image/svg" href="./files/logo.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;400;600&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body data-page="signin">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header" id="site-header"></header>
+
+  <main class="centered" id="main">
+    <div class="panel panel--narrow">
+      <ol class="steps" aria-label="Booking progress">
+        <li class="is-current" aria-current="step"><span>1</span>Sign in</li>
+        <li><span>2</span>Pre-flight check</li>
+        <li><span>3</span>Confirmation</li>
+      </ol>
+
+      <h1 class="panel__title" id="auth-title">Sign in</h1>
+      <p class="auth-context" id="auth-context" hidden></p>
+
+      <div class="mode-tabs" role="group" aria-label="Account">
+        <button type="button" data-mode="signin" aria-pressed="true">I have an account</button>
+        <button type="button" data-mode="signup" aria-pressed="false">I’m new here</button>
+      </div>
+
+      <form id="auth-form" novalidate>
+        <div class="field" data-only="signup" hidden>
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" autocomplete="name" />
+          <p class="field__error" id="name-error"></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" />
+          <p class="field__error" id="email-error"></p>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" />
+          <p class="field__error" id="password-error"></p>
+        </div>
+
+        <div class="field" data-only="signup" hidden>
+          <label for="confirm">Confirm password</label>
+          <input id="confirm" name="confirm" type="password" autocomplete="new-password" />
+          <p class="field__error" id="confirm-error"></p>
+        </div>
+
+        <p class="form-error" id="form-error" role="alert"></p>
+        <button class="btn btn--block" id="auth-submit" type="submit">Sign in</button>
+      </form>
+
+      <p class="fine-print">
+        This is a demo: accounts are stored only in this browser. Please don’t use a password you use elsewhere.
+      </p>
+    </div>
+  </main>
+
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Space Tourism</title>
+  <meta name="description" content="Book a trip to the Moon, Mars, Europa or Titan." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" type="image/svg" href="./files/logo.svg">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@200;400;600&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body data-page="home">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main">
+    <!-- One continuous scroll: hero, destination, crew, technology, coming soon -->
+    <section class="hero" id="home">
+      <div class="hero__text">
+        <p class="hero__lead">So you want to travel to</p>
+        <h1>Space</h1>
+        <p class="hero__copy">
+          Let’s face it: if you want to go to space, you might as well go
+          genuinely to outer space and not hover on the edge of it. So sit
+          back and relax, because we will give you a truly out-of-this-world
+          experience.
+        </p>
+      </div>
+      <a class="explore" href="#destination">Explore</a>
+    </section>
+
+    <section class="planets" id="destination" aria-labelledby="destination-title">
+      <h2 class="section__title" id="destination-title"><b>01</b>Pick your destination</h2>
+
+      <div class="planet-visual">
+        <img id="planet-img" class="swap" alt="" />
+      </div>
+
+      <div class="planet-info">
+        <div class="planet-tabs" id="planet-tabs" role="group" aria-label="Destinations"></div>
+
+        <div class="planet-body swap" id="planet-body">
+          <h2 id="planet-name"></h2>
+          <p id="planet-desc" class="planet-desc"></p>
+          <hr class="rule" />
+          <dl class="stats">
+            <div>
+              <dt>Avg. distance</dt>
+              <dd id="planet-dist"></dd>
+            </div>
+            <div>
+              <dt>Est. travel time</dt>
+              <dd id="planet-time"></dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="planet-cta">
+          <button class="btn" id="book-btn" type="button">Book this flight</button>
+          <p class="ship-note" id="ship-note"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section crew" id="crew" aria-labelledby="crew-title">
+      <h2 class="section__title" id="crew-title"><b>02</b>Meet your crew</h2>
+      <div class="crew-stage">
+        <div class="crew-left">
+          <div class="crew-copy swap" id="crew-copy">
+            <p class="crew-role" id="crew-role"></p>
+            <h3 class="crew-name" id="crew-name"></h3>
+            <p class="crew-bio" id="crew-bio"></p>
+          </div>
+          <div class="crew-dots" id="crew-dots" role="group" aria-label="Choose a crew member"></div>
+        </div>
+        <img class="crew-photo swap" id="crew-photo" alt="" />
+      </div>
+    </section>
+
+    <section class="section tech" id="technology" aria-labelledby="tech-title">
+      <h2 class="section__title" id="tech-title"><b>03</b>Space launch 101</h2>
+      <div class="tech-stage">
+        <div class="tech-nums" id="tech-nums" role="group" aria-label="Choose a technology"></div>
+        <div class="tech-copy swap" id="tech-copy">
+          <p class="tech-label">The terminology…</p>
+          <h3 class="tech-name" id="tech-name"></h3>
+          <p class="tech-desc" id="tech-desc"></p>
+        </div>
+        <picture class="tech-pic">
+          <source id="tech-src" media="(max-width: 900px)" srcset="" />
+          <img class="swap" id="tech-img" alt="" src="" />
+        </picture>
+      </div>
+    </section>
+
+    <section class="section soon" id="coming-soon" aria-labelledby="soon-title">
+      <h2 class="section__title" id="soon-title">Coming soon</h2>
+      <div class="soon-head">
+        <p class="soon-lead">Next bookings open in</p>
+        <div class="countdown" id="countdown" role="timer">
+          <div><span data-unit="days">0</span><small>days</small></div>
+          <div><span data-unit="hours">00</span><small>hours</small></div>
+          <div><span data-unit="minutes">00</span><small>minutes</small></div>
+          <div><span data-unit="seconds">00</span><small>seconds</small></div>
+        </div>
+        <p class="soon-caption" id="countdown-caption"></p>
+      </div>
+      <div class="soon-grid" id="soon-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Space Tourism. A demo project.</p>
+    <a href="#destination">Book a flight</a>
+  </footer>
+
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+
+</html>

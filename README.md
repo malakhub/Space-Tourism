@@ -21,7 +21,7 @@ A cinematic, front-end space tourism site — pick a destination, meet your crew
 ### ✨ See it in action
 
 > *Drop a screenshot or GIF of the hero section here — it's the first thing people see.*
-> `![Space Tourism preview](./files/preview.gif)`
+> `![Space Tourism preview](./files/screenshot1.png)`
 
 ---
 

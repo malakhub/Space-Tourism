@@ -20,7 +20,7 @@ A cinematic, front-end space tourism site — pick a destination, meet your crew
 
 ### ✨ See it in action
 
-![Space Tourism preview](./files/screenshot1.png)
+![Space Tourism preview](./files/Screenshot/screenshot1.png)
 
 ---
 
